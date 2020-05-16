@@ -12,17 +12,3 @@ class Book(models.Model):
     is_published = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='covers/', blank=True)
     number = models.OneToOneField(BookNumber, null=True, blank=True, on_delete=models.CASCADE)
-
-    #cover = models.FileField(upload_to='covers/')
-
-    #Para admin
-    def __str__(self):
-        return self.title
-
-    '''statuses = (
-        (0, 'Unknow'),
-        (1, 'Processed'),
-        (2, 'Paid')
-       )
-    null=false, default='', choices=statuses
-    '''
